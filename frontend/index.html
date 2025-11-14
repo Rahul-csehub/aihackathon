@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EMLV — Class 1 (Frontend)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Explain Me Like I'm From This Village — Class 1</h1>
+      <p class="subtitle">Rural analogies • Local dialects • Offline first • Gamified</p>
+    </header>
+
+    <main>
+      <section class="controls card">
+        <div class="row">
+          <label>Topic
+            <select id="topicSelect" aria-label="Topic select"></select>
+          </label>
+
+          <label>Persona
+            <select id="personaSelect">
+              <option value="farmer">Farmer</option>
+              <option value="shopkeeper">Shopkeeper</option>
+              <option value="elder">Elder</option>
+            </select>
+          </label>
+
+          <label>Dialect
+            <select id="dialectSelect">
+              <option value="bhojpuri">Bhojpuri</option>
+              <option value="haryanvi">Haryanvi</option>
+              <option value="marathi_rural">Marathi</option>
+              <option value="telugu_rural">Telugu</option>
+              <option value="bengali_rural">Bengali</option>
+            </select>
+          </label>
+
+          <button id="explainBtn" class="primary">Explain</button>
+        </div>
+
+        <div class="note">Tip: first load while backend is running to cache Class 1 data for offline use.</div>
+      </section>
+
+      <section class="output card">
+        <h2>Definition</h2>
+        <p id="definition">—</p>
+
+        <h2>Analogy</h2>
+        <p id="analogy">—</p>
+
+        <h2>Dialect Output</h2>
+        <p id="dialect">—</p>
+
+        <h2>Practice</h2>
+        <p id="practice">—</p>
+      </section>
+
+      <section class="gamify card">
+        <div class="gamify-row">
+          <div>
+            <h3>XP: <span id="xp">0</span></h3>
+            <h4>Level: <span id="level">1</span></h4>
+            <div id="badgesContainer" class="badges"></div>
+          </div>
+          <div id="farmVisual" class="farm-visual">🌱 Dry Field</div>
+        </div>
+      </section>
+
+      <section class="offline card">
+        <button id="cacheBtn">Force Cache Class1 (download for offline)</button>
+        <span id="cacheStatus"></span>
+      </section>
+    </main>
+
+    <footer>
+      <small>EMLV — offline-ready demo • For hackathon</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
