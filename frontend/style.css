@@ -1,38 +1,154 @@
-:root{
-  --bg:#0f1720;
-  --card:#0b1220;
-  --accent:#198754;
-  --muted:#9aa4b2;
-  --surface:#0b1220;
-  --glass: rgba(255,255,255,0.03);
+/* ------------------ GLOBAL THEME ------------------ */
+
+:root {
+    --bg-start: #0a0f1f;
+    --bg-end: #081427;
+    --card: rgba(255,255,255,0.07);
+    --border: rgba(255,255,255,0.15);
+    --accent: #4CFF9F;
+    --accent-glow: #4cff9faa;
+    --text-light: #e2e2e2;
+    --text-muted: #8a8a8a;
+    --gold: #FFD866;
+    --radius: 14px;
+    --shadow: 0 0 18px rgba(0,0,0,0.4);
 }
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:system-ui,Segoe UI,Roboto,Arial;
-  background:linear-gradient(180deg,#071022 0%, #0d1721 100%);
-  color:#e6eef5;
-  padding:18px;
+
+/* ------------------ BODY ------------------ */
+
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: linear-gradient(180deg, var(--bg-start), var(--bg-end));
+    color: var(--text-light);
+    padding: 28px;
 }
-.app{max-width:980px;margin:0 auto}
-header h1{margin:0;font-size:22px}
-.subtitle{color:var(--muted);margin:6px 0 16px}
-.card{background:var(--card);padding:14px;border-radius:10px;margin-bottom:14px;box-shadow:0 6px 16px rgba(0,0,0,0.4)}
-.controls .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-label{display:flex;flex-direction:column;font-size:13px;color:var(--muted)}
-select,button{padding:8px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.05);background:transparent;color:inherit}
-.primary{background:var(--accent);border:none;color:#fff;cursor:pointer}
-.primary:hover{filter:brightness(1.05)}
-.output h2{margin:12px 0 6px;font-size:15px}
-.output p{margin:0;padding:8px;background:var(--glass);border-radius:6px}
-.gamify-row{display:flex;justify-content:space-between;align-items:center}
-.farm-visual{font-size:22px;padding:10px 16px;border-radius:8px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));min-width:160px;text-align:center}
-.badges{display:flex;gap:8px;margin-top:6px}
-.badge{background:#0b2a12;padding:6px 8px;border-radius:6px;color:#bff1c5;font-size:13px}
-.offline{display:flex;align-items:center;gap:10px}
-.note{color:var(--muted);margin-top:8px;font-size:13px}
-footer{margin-top:18px;color:var(--muted);text-align:center}
-@media (max-width:640px){
-  .controls .row{flex-direction:column;align-items:stretch}
-  .farm-visual{min-width:0}
+
+/* ------------------ CONTAINER ------------------ */
+
+.app {
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------ HEADER ------------------ */
+
+header h1 {
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+    background: linear-gradient(90deg, #4CFF9F, #70ffbc, #4CFF9F);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 18px var(--accent-glow);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+/* ------------------ CARDS ------------------ */
+
+.card {
+    background: var(--card);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin-bottom: 22px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* ------------------ INPUT ROWS ------------------ */
+
+.controls .row {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+label {
+    font-weight: 600;
+    width: 110px;
+}
+
+select, button {
+    padding: 9px 14px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.06);
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* ------------------ PRIMARY BUTTON ------------------ */
+
+.primary {
+    background: var(--accent);
+    color: #000;
+    border: none;
+    font-weight: 700;
+    box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.primary:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 0 20px var(--accent);
+}
+
+/* ------------------ OUTPUT ------------------ */
+
+.output h2 {
+    margin-top: 6px;
+    font-size: 20px;
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+    color: var(--accent);
+}
+
+.output p {
+    background: rgba(255,255,255,0.06);
+    padding: 10px;
+    border-radius: 10px;
+    color: #f5f5f5;
+    border-left: 4px solid var(--gold);
+}
+
+/* ------------------ GAMIFICATION ------------------ */
+
+.gamify-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.farm-visual img {
+    width: 150px;
+    filter: drop-shadow(0 0 12px #000);
+}
+
+.farm-visual p {
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 8px;
 }
