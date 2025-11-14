@@ -1,0 +1,20 @@
+[
+  {
+    "concept_id": "plants",
+    "analogy_farmer": "Plant is like your crop that grows in the field.",
+    "analogy_shopkeeper": "Plant is like items in your shop that need restocking.",
+    "analogy_elder": "Plant is like a child that needs care and attention."
+  },
+  {
+    "concept_id": "animals",
+    "analogy_farmer": "Animals are like the cows and goats in your shed.",
+    "analogy_shopkeeper": "Animals are like customers who move around.",
+    "analogy_elder": "Animals are like family members who need care."
+  },
+  {
+    "concept_id": "numbers",
+    "analogy_farmer": "Numbers are like counting seeds in your hand.",
+    "analogy_shopkeeper": "Numbers are like counting money in your cashbox.",
+    "analogy_elder": "Numbers are like counting steps while walking."
+  }
+]

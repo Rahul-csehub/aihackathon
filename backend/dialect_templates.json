@@ -1,0 +1,19 @@
+{
+  "templates": {
+    "bhojpuri": {
+      "simple_pattern": "{definition_simplified}. Ee bilkul waise hee baat baa: {analogy}"
+    },
+    "haryanvi": {
+      "simple_pattern": "{definition_simplified}. Dekh bhai, ye bilkul iske jaisa hai: {analogy}"
+    },
+    "marathi_rural": {
+      "simple_pattern": "{definition_simplified}. Haa re, he barobar ase aahe: {analogy}"
+    },
+    "telugu_rural": {
+      "simple_pattern": "{definition_simplified}. Idi alage untundi: {analogy}"
+    },
+    "bengali_rural": {
+      "simple_pattern": "{definition_simplified}. Eta thik oi rokom: {analogy}"
+    }
+  }
+}

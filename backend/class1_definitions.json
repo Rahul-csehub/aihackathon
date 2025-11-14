@@ -1,0 +1,20 @@
+[
+  {
+    "id": "plants",
+    "subject": "EVS",
+    "topic": "Plants",
+    "definition": "Plants are living things that grow from seeds and need air, water, and sunlight."
+  },
+  {
+    "id": "animals",
+    "subject": "EVS",
+    "topic": "Animals",
+    "definition": "Animals are living creatures that move, eat food, and can feel things."
+  },
+  {
+    "id": "numbers",
+    "subject": "Math",
+    "topic": "Numbers 1 to 50",
+    "definition": "Numbers are symbols that help us count things around us."
+  }
+]
